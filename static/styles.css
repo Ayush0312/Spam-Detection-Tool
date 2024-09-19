@@ -1,0 +1,181 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    position: relative; /* Changed to relative for absolute positioning */
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 1s ease;
+}
+
+/* Position Home Icon in the Top-Left Corner */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute; /* Absolute positioning to place it in the corner */
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1.6rem; /* Slightly larger font for the home icon */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #99f2c8;
+}
+
+/* Container & Form Styling */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 90%;
+    margin: 20px auto;
+    animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+label {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #f0f0f0;
+    font-size: 1rem;
+    min-height: 150px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+textarea:focus {
+    box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+input[type="submit"] {
+    background: linear-gradient(45deg, #1f4037, #99f2c8);
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(45deg, #99f2c8, #1f4037);
+    transform: scale(1.05);
+}
+
+/* Result Card Styling */
+.result-card {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    margin-top: 30px;
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+blockquote {
+    background-color: #eef4ed;
+    border-left: 5px solid #1f4037;
+    padding: 15px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #555;
+    font-size: 1.2rem;
+    font-family: 'Georgia', serif;
+}
+
+.prediction {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: Red;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Specific Colors for Spam and Not Spam */
+.prediction.not-spam {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: rgb(31, 163, 46);
+    display: inline-block;
+    width: 100%;
+}
+

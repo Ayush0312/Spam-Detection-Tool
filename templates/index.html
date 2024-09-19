@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Detection</title>
+    <!-- Link to Font Awesome for the home icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/"><i class="fas fa-home"></i></a></li> <!-- Home icon -->
+            </ul>
+        </nav>
+        <h1>Spam Detection</h1>
+    </header>
+
+    <div class="container">
+        <form action="/result" method="POST">
+            <label for="message">Enter your message to check if it's spam:</label>
+            <textarea id="message" name="message" placeholder="Type your message here..."></textarea>
+            <input type="submit" value="Check Spam">
+        </form>
+    </div>
+</body>
+</html>
